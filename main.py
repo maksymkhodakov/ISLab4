@@ -62,22 +62,22 @@ if __name__ == "__main__":
             monday, tuesday, wednesday, thursday, friday = [], [], [], [], []
             days = [monday, tuesday, wednesday, thursday, friday]
             for i in result.keys():
-                if result[i] < 6:
+                if result[i] < 4:
                     monday.append((i, result[i]))
-                elif result[i] < 12 and result[i] >= 6:
-                    tuesday.append((i, result[i] - 6))
-                elif result[i] < 18 and result[i] >= 12:
-                    wednesday.append((i, result[i] - 12))
-                elif result[i] < 24 and result[i] >= 18:
-                    thursday.append((i, result[i] - 18))
-                elif result[i] >= 24:
-                    friday.append((i, result[i] - 24))
+                elif result[i] < 8:
+                    tuesday.append((i, result[i] - 4))
+                elif result[i] < 12:
+                    wednesday.append((i, result[i] - 8))
+                elif result[i] < 16:
+                    thursday.append((i, result[i] - 12))
+                else:
+                    friday.append((i, result[i] - 16))
 
 
             def print_day(day, l):
                 r = ""
                 for d, n in day:
-                    if (l == n):
+                    if l == n:
                         r += str(d) + "\n"
                 return r
 

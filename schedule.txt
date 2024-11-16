@@ -6,94 +6,100 @@ Counter for backtracking with Constraint Propagation: 62
 +---------------+----------------------------+---------------------------+-------------------------------+
 |  Lesson Time  |           Monday           |          Tuesday          |           Wednesday           |
 +---------------+----------------------------+---------------------------+-------------------------------+
-| 08:40 - 10:15 |       122,Algorithms       |          122,C++          |             121,AI            |
-|               |   Will Turner,lecture,7    | Chel Yakuis,Practice 2,4  |      Sand Man,lecture,5       |
-|               |                            |                           |                               |
-|               |                            |           122,AI          |                               |
-|               |                            |   Sand Man,Practice 1,5   |                               |
-|               |                            |                           |                               |
-|               |                            |           122,IT          |                               |
-|               |                            | Spider Man,Practice 3,10  |                               |
-|               |                            |                           |                               |
-|               |                            |       121,Algorithms      |                               |
-|               |                            |   Will Turner,lecture,7   |                               |
+| 08:40 - 10:15 |       122,Algorithms       |        122,Algebra        |             122,IT            |
+|               |   Will Turner,lecture,7    |   Davie Jones,lecture,5   |     Spider Man,lecture,7      |
 |               |                            |                           |                               |
 |               |                            |                           |                               |
-| 10:35 - 12:10 |       122,Algorithms       |           122,AI          |             121,AI            |
-|               | Will Turner,Practice 1,7   |    Sand Man,lecture,5     |     Sand Man,Practice 2,5     |
+| 10:35 - 12:10 |       122,Algorithms       |          122,C++          |             122,IT            |
+|               | Will Turner,Practice 1,7   |   Chel Yakuis,lecture,4   |    Spider Man,Practice 1,4    |
 |               |                            |                           |                               |
-|               |        122,Algebra         |                           |             121,IT            |
-|               | Davie Jones,Practice 2,4   |                           |    Spider Man,Practice 1,7    |
+|               |        122,Algebra         |                           |         121,Algorithms        |
+|               | Davie Jones,Practice 2,4   |                           |   Will Turner,Practice 2,7    |
 |               |                            |                           |                               |
-|               |          122,C++           |                           |          121,Android          |
-|               | Chel Yakuis,Practice 3,5   |                           |     Bat Man,Practice 3,4      |
+|               |          122,C++           |                           |             121,AI            |
+|               | Chel Yakuis,Practice 3,5   |                           |    Sand Man,Practice 3,10     |
 |               |                            |                           |                               |
-|               |           122,AI           |                           |            113,IOS            |
-|               |  Sand Man,Practice 4,10    |                           |   Doctor Strange,lecture,10   |
+|               |           122,AI           |                           |          113,Algebra          |
+|               |  Sand Man,Practice 4,10    |                           |    Davie Jones,lecture,11     |
 |               |                            |                           |                               |
 |               |           121,IT           |                           |                               |
 |               |   Spider Man,lecture,11    |                           |                               |
 |               |                            |                           |                               |
 |               |                            |                           |                               |
-| 12:20 - 13:55 |       122,Algorithms       |           122,IT          |             121,IT            |
-|               | Will Turner,Practice 2,7   |   Spider Man,lecture,7    |    Spider Man,Practice 3,4    |
+| 12:20 - 13:55 |       122,Algorithms       |          122,C++          |             122,IT            |
+|               | Will Turner,Practice 2,7   | Chel Yakuis,Practice 2,4  |    Spider Man,Practice 2,4    |
 |               |                            |                           |                               |
-|               |        122,Algebra         |                           |            121,IOS            |
-|               | Davie Jones,Practice 1,4   |                           | Doctor Strange,Practice 1,10  |
+|               |        122,Algebra         |           122,AI          |         121,Algorithms        |
+|               | Davie Jones,Practice 1,4   |   Sand Man,Practice 1,5   |   Will Turner,Practice 1,10   |
 |               |                            |                           |                               |
-|               |          122,C++           |                           |          121,Android          |
-|               | Chel Yakuis,Practice 4,5   |                           |     Bat Man,Practice 2,7      |
+|               |          122,C++           |           122,IT          |             121,AI            |
+|               | Chel Yakuis,Practice 4,5   | Spider Man,Practice 3,10  |     Sand Man,Practice 4,5     |
 |               |                            |                           |                               |
-|               |           122,AI           |                           |                               |
-|               |  Sand Man,Practice 3,10    |                           |                               |
+|               |           122,AI           |       121,Algorithms      |            121,IOS            |
+|               |  Sand Man,Practice 3,10    |   Will Turner,lecture,7   | Doctor Strange,Practice 3,11  |
 |               |                            |                           |                               |
-|               |          121,IOS           |                           |                               |
-|               | Doctor Strange,lecture,11  |                           |                               |
+|               |          121,IOS           |                           |            113,C++            |
+|               | Doctor Strange,lecture,11  |                           |     Chel Yakuis,lecture,7     |
 |               |                            |                           |                               |
 |               |                            |                           |                               |
-| 14:05 - 15:40 |       122,Algorithms       |           122,IT          |            121,IOS            |
-|               | Will Turner,Practice 3,7   |  Spider Man,Practice 1,4  |  Doctor Strange,Practice 2,4  |
+| 14:05 - 15:40 |       122,Algorithms       |           122,AI          |         121,Algorithms        |
+|               | Will Turner,Practice 3,7   |    Sand Man,lecture,5     |   Will Turner,Practice 3,7    |
 |               |                            |                           |                               |
-|               |          122,C++           |       121,Algorithms      |          121,Android          |
-|               | Chel Yakuis,Practice 1,4   | Will Turner,Practice 2,7  |     Bat Man,Practice 1,7      |
+|               |          122,C++           |                           |             121,AI            |
+|               | Chel Yakuis,Practice 1,4   |                           |     Sand Man,Practice 1,5     |
 |               |                            |                           |                               |
-|               |           122,AI           |           121,AI          |             113,IT            |
-|               |   Sand Man,Practice 2,5    |  Sand Man,Practice 3,10   |     Spider Man,lecture,10     |
+|               |           122,AI           |                           |             121,IT            |
+|               |   Sand Man,Practice 2,5    |                           |   Spider Man,Practice 2,10    |
 |               |                            |                           |                               |
-|               |        121,Android         |        113,Algebra        |                               |
-|               |    Bat Man,lecture,10      |  Davie Jones,lecture,11   |                               |
+|               |        121,Android         |                           |            113,C++            |
+|               |    Bat Man,lecture,10      |                           |   Chel Yakuis,Practice 4,4    |
 |               |                            |                           |                               |
 |               |                            |                           |                               |
 +---------------+----------------------------+---------------------------+-------------------------------+
-+---------------+-------------------------------+--------+
-|  Lesson Time  |            Thursday           | Friday |
-+---------------+-------------------------------+--------+
-| 08:40 - 10:15 |             113,IT            |        |
-|               |    Spider Man,Practice 3,7    |        |
-|               |                               |        |
-|               |            113,C++            |        |
-|               |   Chel Yakuis,Practice 1,4    |        |
-|               |                               |        |
-|               |            113,IOS            |        |
-|               | Doctor Strange,Practice 2,10  |        |
-|               |                               |        |
-|               |                               |        |
-| 10:35 - 12:10 |            113,C++            |        |
-|               |   Chel Yakuis,Practice 2,4    |        |
-|               |                               |        |
-|               |            113,IOS            |        |
-|               | Doctor Strange,Practice 1,10  |        |
-|               |                               |        |
-|               |          113,Android          |        |
-|               |     Bat Man,Practice 3,7      |        |
-|               |                               |        |
-|               |                               |        |
-| 12:20 - 13:55 |          113,Android          |        |
-|               |       Bat Man,lecture,4       |        |
-|               |                               |        |
-|               |                               |        |
-| 14:05 - 15:40 |          113,Android          |        |
-|               |     Bat Man,Practice 1,4      |        |
-|               |                               |        |
-|               |                               |        |
-+---------------+-------------------------------+--------+
++---------------+-------------------------------+-------------------------------+
+|  Lesson Time  |            Thursday           |             Friday            |
++---------------+-------------------------------+-------------------------------+
+| 08:40 - 10:15 |             121,AI            |          113,Algebra          |
+|               |      Sand Man,lecture,5       |   Davie Jones,Practice 1,4    |
+|               |                               |                               |
+|               |                               |             113,IT            |
+|               |                               |    Spider Man,Practice 2,7    |
+|               |                               |                               |
+|               |                               |            113,C++            |
+|               |                               |   Chel Yakuis,Practice 3,5    |
+|               |                               |                               |
+|               |                               |                               |
+| 10:35 - 12:10 |             121,AI            |          113,Algebra          |
+|               |     Sand Man,Practice 2,5     |   Davie Jones,Practice 2,4    |
+|               |                               |                               |
+|               |             121,IT            |             113,IT            |
+|               |    Spider Man,Practice 1,7    |    Spider Man,Practice 1,7    |
+|               |                               |                               |
+|               |          121,Android          |            113,IOS            |
+|               |     Bat Man,Practice 3,4      | Doctor Strange,Practice 3,10  |
+|               |                               |                               |
+|               |            113,IOS            |                               |
+|               |   Doctor Strange,lecture,10   |                               |
+|               |                               |                               |
+|               |                               |                               |
+| 12:20 - 13:55 |             121,IT            |             113,IT            |
+|               |    Spider Man,Practice 3,4    |    Spider Man,Practice 3,7    |
+|               |                               |                               |
+|               |            121,IOS            |            113,C++            |
+|               | Doctor Strange,Practice 1,10  |   Chel Yakuis,Practice 1,4    |
+|               |                               |                               |
+|               |          121,Android          |            113,IOS            |
+|               |     Bat Man,Practice 2,7      | Doctor Strange,Practice 2,10  |
+|               |                               |                               |
+|               |                               |                               |
+| 14:05 - 15:40 |            121,IOS            |            113,C++            |
+|               |  Doctor Strange,Practice 2,4  |   Chel Yakuis,Practice 2,4    |
+|               |                               |                               |
+|               |          121,Android          |            113,IOS            |
+|               |     Bat Man,Practice 1,7      | Doctor Strange,Practice 1,10  |
+|               |                               |                               |
+|               |             113,IT            |          113,Android          |
+|               |     Spider Man,lecture,10     |     Bat Man,Practice 3,7      |
+|               |                               |                               |
+|               |                               |                               |
++---------------+-------------------------------+-------------------------------+
