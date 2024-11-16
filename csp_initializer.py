@@ -59,7 +59,7 @@ def same_teacher(assignment):
     return False
 
 
-# якщо однакові спеціальності, різні класи, однаковий meeting time і хоча б один з класів - лекція - до побачення
+# якщо однакові спеціальності, різні класи, однаковий meeting time і хоча б один з класів - лекція - не проходить
 # тому що для однієї спеціальності лекції не можуть пропускатися.
 #  Не може бути двох лекцій одночасно або практика під час лекції
 def same_spec(assignment):
@@ -74,8 +74,7 @@ def same_spec(assignment):
     return False
 
 
-# якщо однаковий тип занять, різні класи і однаковий час - до побачення
-
+# якщо однаковий тип занять, різні класи і однаковий час - то не проходить
 def groups_conflict(assignment):
     arr = get_var(assignment)
     if len(arr) == 1:
@@ -89,5 +88,4 @@ def groups_conflict(assignment):
 
 my_csp = {VARIABLES: classes,
           DOMAINS: meeting_times,
-          CONSTRAINTS: [same_teacher, same_spec, groups_conflict]
-          }
+          CONSTRAINTS: [same_teacher, same_spec, groups_conflict]}

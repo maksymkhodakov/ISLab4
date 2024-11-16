@@ -1,5 +1,5 @@
 # Object which contains all the information about one class
-class Class:
+class Event:
     def __init__(self, speciality, subject, room, time, day, type_of_class):
         self._speciality = speciality
         self._subject = subject
@@ -10,7 +10,6 @@ class Class:
         self._day = day
         self._type_of_class = type_of_class
 
-    # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     def __str__(self):
         return str(self._speciality._name) + "," + str(self._subject._name) + "\n" + str(self._teacher) + "," + str(
             self._type_of_class) + "," + str(self._room[0]) + " \n"
@@ -41,4 +40,4 @@ class Room:
 class Speciality:
     def __init__(self, name, subjects):
         self._name = name
-        self._subjects = subjects
+        self.subjects = subjects

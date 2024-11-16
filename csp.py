@@ -1,4 +1,4 @@
-from csp_init import *
+from csp_initializer import *
 csp = my_csp
 
 counter = 0

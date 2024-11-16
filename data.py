@@ -1,7 +1,6 @@
-
-import random as rnd
 from datasource import *
 from model import *
+
 
 class Data:
     def __init__(self):
@@ -9,28 +8,26 @@ class Data:
         self._meetingTimes = MEETING_TIMES
         self._subjects = self.init_subjects(SUBJECTS)
         self._specs = self.init_specs(SPECIALITIES)
-        self._rooms = ROOMS
+        self._rooms = AUDITORIUMS
         self._classes = self.init_classes()
-      
-    
-        
 
-    def init_subjects(self, subjects):
+    @staticmethod
+    def init_subjects(subjects):
         subj = []
         for s in subjects:
             name = s["name"]
             num = s["number_of_students"]
             gr = s["groups"]
             tea = s["teacher"]
-            subj.append(Subject(name, num,gr, tea))
+            subj.append(Subject(name, num, gr, tea))
         return subj
 
-    def get_domains(self):
+    @staticmethod
+    def get_domains():
         domains = []
         for i in range(30):
             domains.append(i)
         return domains
-
 
     def init_specs(self, specialities):
         spec = []
@@ -44,19 +41,16 @@ class Data:
             spec.append(Speciality(name, sub))
         return spec
 
-
     def init_classes(self):
         classes = []
         for sp in self._specs:
-            for sub in sp._subjects:
-                lect = Class(sp, sub, None, None, None, "lecture")
+            for sub in sp.subjects:
+                lect = Event(sp, sub, None, None, None, "lecture")
                 classes.append(lect)
                 i = 1
                 for g in range(sub._groups):
                     st = "Practice " + str(i)
-                    cl = Class(sp, sub, None, None, None, st)
+                    cl = Event(sp, sub, None, None, None, st)
                     classes.append(cl)
-                    i+=1
+                    i += 1
         return classes
-
-

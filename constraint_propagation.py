@@ -1,4 +1,4 @@
-from csp_init import *
+from csp_initializer import *
 
 csp = my_csp
 
@@ -24,11 +24,11 @@ def getRoom(csp, assignment, var, value):
     rooms.sort(key=lambda c: c[1])
 
     for r in rooms:
-        if (r[1] >= var._number_of_students):
+        if r[1] >= var._number_of_students:
             free = True
             for k in csp[VARIABLES]:
-                if (assignment[k] is not None):
-                    if (k._room == r and assignment[k] == value):
+                if assignment[k] is not None:
+                    if k._room == r and assignment[k] == value:
                         free = False
             if free:
                 return r
@@ -72,9 +72,9 @@ def check_for_zero(assignment, csp):
     for i in csp[VARIABLES]:
         r = False
         for j in var_domains[i]:
-            if (j is not None):
+            if j is not None:
                 r = True
-        if r == False:
+        if not r:
             return False
     return True
 
@@ -92,20 +92,20 @@ def add_domains(assignment, csp, value):
     global var_domains
     j = value
     for i in csp[VARIABLES]:
-        if (assignment[i] is None):
-            if (not i == j):
-                if (i._teacher == j._teacher):
+        if assignment[i] is None:
+            if not i == j:
+                if i._teacher == j._teacher:
                     for k in range(len(var_domains[i])):
-                        if (var_domains[i][k] == assignment[j]):
+                        if var_domains[i][k] == assignment[j]:
                             var_domains[i][k] = None
-                if (i._type_of_class == j._type_of_class):
+                if i._type_of_class == j._type_of_class:
                     for k in range(len(var_domains[i])):
-                        if (var_domains[i][k] == assignment[j]):
+                        if var_domains[i][k] == assignment[j]:
                             var_domains[i][k] = None
                 if (i._speciality == j._speciality and (i._type_of_class == "lecture") or (
                         j._type_of_class == "lecture")):
                     for k in range(len(var_domains[i])):
-                        if (var_domains[i][k] == assignment[j]):
+                        if var_domains[i][k] == assignment[j]:
                             var_domains[i][k] = None
 
 

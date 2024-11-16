@@ -1,4 +1,4 @@
-from csp_init import *
+from csp_initializer import *
 
 csp = my_csp
 
@@ -87,7 +87,7 @@ def lcv_heuristic(assignment):
         teach[i._teacher] = 0
     res = []
     for i in csp[VARIABLES]:
-        if (assignment[i] is None):
+        if assignment[i] is None:
             teach[i._teacher] += 1
             res.append(i)
     res.sort(key=lambda l: teach[l._teacher])

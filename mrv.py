@@ -1,4 +1,4 @@
-from csp_init import *
+from csp_initializer import *
 
 mrv_domains = {}
 counter = 0
