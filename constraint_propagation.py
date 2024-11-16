@@ -64,8 +64,7 @@ def constraint_propagation(assignment, csp):
     return FAILURE
 
 
-# Перевіряє, чи залишилося хоча б одне можливе значення для кожної змінної. 
-
+# Перевіряє, чи залишилося хоча б одне можливе значення для кожної змінної.
 def check_for_zero(assignment, csp):
     global var_domains
 

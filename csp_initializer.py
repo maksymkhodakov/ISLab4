@@ -1,7 +1,7 @@
 from data import *
 
 data = Data()
-classes = data._classes
+classes = data.classes
 
 # масив чисел від 0 до 29
 meeting_times = data.get_domains()

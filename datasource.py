@@ -1,4 +1,3 @@
-
 DAYS = ["Monday",
         "Tuesday",
         "Wednesday",

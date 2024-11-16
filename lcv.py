@@ -27,8 +27,8 @@ def getRoom(csp, assignment, var, value):
         if r[1] >= var._number_of_students:
             free = True
             for k in csp[VARIABLES]:
-                if (assignment[k] is not None):
-                    if (k._room == r and assignment[k] == value):
+                if assignment[k] is not None:
+                    if k._room == r and assignment[k] == value:
                         free = False
             if free:
                 return r
@@ -37,7 +37,7 @@ def getRoom(csp, assignment, var, value):
 def is_in_domain(var, value):
     global var_domains
     for d in var_domains[var]:
-        if (d == value):
+        if d == value:
             return True
     return False
 

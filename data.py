@@ -9,7 +9,7 @@ class Data:
         self._subjects = self.init_subjects(SUBJECTS)
         self._specs = self.init_specs(SPECIALITIES)
         self._rooms = AUDITORIUMS
-        self._classes = self.init_classes()
+        self.classes = self.init_classes()
 
     @staticmethod
     def init_subjects(subjects):
