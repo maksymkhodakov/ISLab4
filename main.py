@@ -2,8 +2,7 @@ import sys  # Імпортуємо модуль sys для роботи з па�
 
 import file_processor  # Імпортуємо модуль для обробки файлів з даними
 import randomizer  # Імпортуємо модуль для генерації випадкових даних (ймовірно, для тестування)
-
-from genetic_algo import genetic_algorithm, TIMESLOTS  # Імпортуємо генетичний алгоритм та часові слоти з модуля genetic_algo
+from csp_algo import csp_algorithm
 
 
 # Функція для виведення розкладу з додатковою інформацією
@@ -83,8 +82,14 @@ def main():
     lecturers = file_processor.load_lecturers('datasource/lectures.csv')  # Завантажуємо інформацію про викладачів
     auditoriums = file_processor.load_auditoriums('datasource/auditoriums.csv')  # Завантажуємо інформацію про аудиторії
 
-    # Запускаємо генетичний алгоритм для отримання найкращого розкладу
-    best_schedule = genetic_algorithm(groups, subjects, lecturers, auditoriums)
+    # Запускаємо CSP алгоритм для отримання найкращого розкладу
+    best_schedule = csp_algorithm(groups, subjects, lecturers, auditoriums)
+
+    if best_schedule:
+        print("\nBest schedule:\n")
+        print_schedule(best_schedule, lecturers, groups, auditoriums)
+    else:
+        print("Не вдалося знайти рішення.")
 
     # Виводимо розклад у консоль та записуємо його у файл по заданій назві
     with open('schedule_output.txt', 'w', encoding='utf-8') as f:

@@ -1,5 +1,6 @@
 import random  # Імпортуємо модуль random для генерації випадкових чисел
-from main import genetic_algorithm, print_schedule  # Імпортуємо генетичний алгоритм та функцію для виведення розкладу
+from csp_algo import csp_algorithm
+from main import print_schedule
 
 
 # Функції для випадкової генерації даних
@@ -89,6 +90,6 @@ def main():
     auditoriums = generate_random_auditoriums(num_auditoriums)  # Генеруємо аудиторії
 
     # Запускаємо генетичний алгоритм для створення розкладу
-    best_schedule = genetic_algorithm(groups, subjects, lecturers, auditoriums)
+    best_schedule = csp_algorithm(groups, subjects, lecturers, auditoriums)
     print("\nBest schedule:\n")
     print_schedule(best_schedule, lecturers, groups, auditoriums)  # Виводимо найкращий знайдений розклад
