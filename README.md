@@ -91,4 +91,207 @@
 
 ------
 
-### Приклад використання CSP в задачі створення розкладу за допомогою Генетичного Алгоритму (ISLab3)
+
+# Приклад використання CSP в задачі створення розкладу
+
+У цій роботі розглядається застосування **CSP (Constraint Satisfaction Problem)** для вирішення задачі створення розкладу занять. Використовуються різні алгоритми та евристики, такі як пошук з поверненням, MRV, LCV та поширення обмежень, для підвищення ефективності розв'язку.
+
+## Зміст
+
+1. [Вступ](#вступ)
+2. [Основні компоненти](#основні-компоненти)
+   - [Дані](#дані)
+   - [Моделі](#моделі)
+3. [Ініціалізація CSP](#ініціалізація-csp)
+4. [Алгоритми та евристики](#алгоритми-та-евристики)
+   - [Базовий алгоритм пошуку з поверненням](#базовий-алгоритм-пошуку-з-поверненням)
+   - [Евристика MRV (Minimum Remaining Values)](#евристика-mrv-minimum-remaining-values)
+   - [Евристика LCV (Least Constraining Value)](#евристика-lcv-least-constraining-value)
+   - [Поширення обмежень](#поширення-обмежень)
+5. [Реалізація](#реалізація)
+   - [Файл `data.py`](#файл-datapy)
+   - [Файл `model.py`](#файл-modelpy)
+   - [Файл `csp_initializer.py`](#файл-csp_initializerpy)
+   - [Файл `csp.py`](#файл-csppy)
+   - [Файл `mrv.py`](#файл-mrvpy)
+   - [Файл `lcv.py`](#файл-lcvpy)
+   - [Файл `constraint_propagation.py`](#файл-constraint_propagationpy)
+   - [Файл `main.py`](#файл-mainpy)
+6. [Висновки](#висновки)
+7. [Посилання](#посилання)
+
+## Вступ
+
+**Задача розкладу занять** є класичним прикладом проблеми задоволення обмежень (CSP), де необхідно призначити ресурси (аудиторії, викладачі) подіям (заняттям) в певні часові інтервали, дотримуючись різних обмежень.
+
+У цій роботі використовується CSP для автоматизованого створення розкладу занять університету. Розглядаються різні алгоритми та евристики для ефективного вирішення цієї задачі.
+
+## Основні компоненти
+
+### Дані
+
+Дані для задачі розкладу зберігаються у файлі `datasource.py`. Вони включають:
+
+```python
+DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+
+MEETING_TIMES = [
+    "08:40 - 10:15",
+    "10:35 - 12:10",
+    "12:20 - 13:55",
+    "14:05 - 15:40"
+]
+
+AUDITORIUMS = [
+    ["1", 20],
+    ["2", 35],
+    # ...
+]
+
+TEACHERS = [
+    {"name": "Will Turner", "subject": "Algorithms"},
+    # ...
+]
+
+SUBJECTS = [
+    {"name": "Algorithms", "number_of_students": 60, "groups": 3, "teacher": "Will Turner"},
+    # ...
+]
+
+SPECIALITIES = [
+    {"name": "122", "subjects": ["Algorithms", "Algebra", "C++", "AI", "IT"]},
+    # ...
+]
+```
+
+### Моделі
+
+У файлі `model.py` визначені основні класи:
+
+```python
+class Event:
+    def __init__(self, speciality, subject, room, time, day, type_of_class):
+        self._speciality = speciality
+        self._subject = subject
+        # ...
+
+class Teacher:
+    def __init__(self, name, subject):
+        self._name = name
+        self._subject = subject
+
+class Subject:
+    def __init__(self, name, number_of_students, groups, teacher):
+        self._name = name
+        # ...
+```
+
+## Ініціалізація CSP
+
+Файл `csp_initializer.py` відповідає за ініціалізацію CSP. Основні функції:
+
+- **Ініціалізація змінних та доменів**:
+```python
+my_csp = {
+    VARIABLES: classes,
+    DOMAINS: meeting_times,
+    CONSTRAINTS: [same_teacher, same_spec, groups_conflict]
+}
+```
+
+- **Перевірка обмежень**:
+```python
+def same_teacher(assignment):
+    ...
+
+def same_spec(assignment):
+    ...
+
+def groups_conflict(assignment):
+    ...
+```
+
+## Алгоритми та евристики
+
+### Базовий алгоритм пошуку з поверненням
+
+Реалізований у файлі `csp.py`:
+
+```python
+def backtracking(assignment, csp, heuristic):
+    ...
+```
+
+### Евристика MRV (Minimum Remaining Values)
+
+Реалізована у файлі `mrv.py`:
+
+```python
+def find_mrv(assignment, csp):
+    ...
+```
+
+### Евристика LCV (Least Constraining Value)
+
+Реалізована у файлі `lcv.py`:
+
+```python
+def lcv_heuristic(assignment):
+     ...
+```
+
+### Поширення обмежень
+
+Реалізовано у файлі `constraint_propagation.py`:
+
+```python
+def constraint_propagation(assignment, csp):
+     ...
+```
+
+## Реалізація
+
+### Файл `data.py`
+
+Ініціалізація даних для CSP.
+
+### Файл `model.py`
+
+Реалізація класів `Event`, `Teacher`, `Subject`, `Room`, `Speciality`.
+
+### Файл `csp_initializer.py`
+
+Ініціалізація змінних, доменів та обмежень.
+
+### Файл `csp.py`
+
+Базовий алгоритм пошуку.
+
+### Файл `mrv.py`
+
+Реалізація евристики MRV.
+
+### Файл `lcv.py`
+
+Реалізація евристики LCV.
+
+### Файл `constraint_propagation.py`
+
+Реалізація алгоритму поширення обмежень.
+
+### Файл `main.py`
+
+Основна точка входу, запуск алгоритмів та вивід результатів.
+
+## Висновки
+
+У цій роботі продемонстровано застосування CSP для вирішення задачі створення розкладу занять.
+
+## Посилання
+
+- [Constraint Satisfaction Problems](https://en.wikipedia.org/wiki/Constraint_satisfaction_problem)
+- [Backtracking Algorithm](https://en.wikipedia.org/wiki/Backtracking)
+- [Minimum Remaining Values (MRV)](https://www.geeksforgeeks.org/minimum-remaining-value-mrv-and-degree-heuristic-in-backtracking/)
+- [Least Constraining Value (LCV)](https://www.geeksforgeeks.org/least-constraining-value-heuristic-in-backtracking/)
+- [Constraint Propagation](https://en.wikipedia.org/wiki/Constraint_propagation)
+
